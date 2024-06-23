@@ -33,7 +33,7 @@ public struct CongressRequest {
     // MARK: init methods
 
     // RequestType-only init
-    init(requestType: RequestType) {
+    public init(requestType: RequestType) {
         self.requestType = requestType
         self.path = CongressRequest.basePath + requestType.rawValue
 
