@@ -26,7 +26,7 @@ public struct CongressRequest {
     // MARK: Nested Types
 
     // RequestType
-    enum RequestType: String {
+    public enum RequestType: String {
         case bill = "bill/"
     }
 
