@@ -1,6 +1,6 @@
 import Foundation
 
-struct CongressRequest { 
+public struct CongressRequest { 
 
     // MARK: Instance Stored Properties
 

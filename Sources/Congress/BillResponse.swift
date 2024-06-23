@@ -2,10 +2,10 @@
 import Foundation
 
 // MARK: - BillResponse
-struct BillResponse: Codable {
+public struct BillResponse: Codable {
     let bills: [Bill]
-    let pagination: Pagination
-    let request: Request
+    let pagination: PaginationMeta
+    let request: RequestMeta
 
     // MARK: - Bill
     struct Bill: Codable {

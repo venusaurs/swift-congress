@@ -1,11 +1,11 @@
 // MARK: - Pagination
-struct Pagination: Codable {
+public struct PaginationMeta: Codable {
     let count: Int
     let next: String?
 }
 
 // MARK: - Request
-struct Request: Codable {
+public struct RequestMeta: Codable {
     let billUrl: String?
     let billNumber: String?
     let billType: String?
