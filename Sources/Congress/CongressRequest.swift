@@ -3,6 +3,9 @@ import Foundation
 public struct CongressRequest { 
 
     // MARK: Instance Stored Properties
+    
+    // URL String
+    public let url: String
 
     // Universal Request Properties
     let requestType: RequestType
@@ -42,5 +45,11 @@ public struct CongressRequest {
         self.urlComponents.host = CongressRequest.host
         self.urlComponents.path = self.path
         self.urlComponents.queryItems = [CongressRequest.formatQueryItem]
+
+        // Set the URL string
+        guard let urlString = urlComponents.string else {
+            fatalError("Invalid URL")
+        }
+        self.url = urlString
     }
 }
