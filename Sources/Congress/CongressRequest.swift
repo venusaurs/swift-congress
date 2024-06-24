@@ -36,7 +36,7 @@ public struct CongressRequest {
     // MARK: init methods
 
     // RequestType-only init
-    public init(requestType: RequestType) {
+    public init(requestType: RequestType, apiKey: String) {
         self.requestType = requestType
         self.path = CongressRequest.basePath + requestType.rawValue
 
@@ -45,6 +45,7 @@ public struct CongressRequest {
         self.urlComponents.host = CongressRequest.host
         self.urlComponents.path = self.path
         self.urlComponents.queryItems = [CongressRequest.formatQueryItem]
+        self.urlComponents.queryItems?.append(URLQueryItem(name: "api_key", value: apiKey))
 
         // Set the URL string
         guard let urlString = urlComponents.string else {
